@@ -11,6 +11,6 @@
 		{ "name": "David Grudl",  "homepage": "http://davidgrudl.com" }
 	],
 	"require": {
-		"latte/latte": "~2.2",
+		"latte/latte": "~2.2"
 	}
 }
