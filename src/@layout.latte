@@ -138,12 +138,12 @@
 				<a n:tag-if="'tree' !== $active" href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
 			</li>
 			{foreach $annotationGroups as $annotation}
-                <li n:class="$active === 'annotation-group-' . $annotation ? active">
-                    <a n:tag-if="$active !== 'annotation-group-' . $annotation" href="annotation-group-{$annotation}.html" title="List of elements with {$annotation} annotation">
-                        <span>{$annotation|firstUpper}</span>
-                    </a>
-                </li>
-            {/foreach}
+				<li n:class="$active === 'annotation-group-' . $annotation ? active">
+					<a n:tag-if="$active !== 'annotation-group-' . $annotation" href="annotation-group-{$annotation}.html" title="List of elements with {$annotation} annotation">
+						<span>{$annotation|firstUpper}</span>
+					</a>
+				</li>
+			{/foreach}
 		</ul>
 		<ul>
 			<li n:if="$config->download">
