@@ -30,7 +30,7 @@
 
 	{var $annotations = $function->annotations}
 
-	<table class="summary" id="parameters" n:if="$function->numberOfParameters">
+	<table class="summary" id="parameters" n:if="count($function->parameters)">
 	<caption>Parameters summary</caption>
 	<tr n:foreach="$function->parameters as $parameter" id="${$parameter->name}">
 		<td class="name"><code>{$parameter->typeHint|typeLinks:$function|noescape}</code></td>
