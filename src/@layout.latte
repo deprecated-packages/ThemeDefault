@@ -106,7 +106,7 @@
 
 <div id="right">
 <div id="rightInner">
-	<form{if $config->googleCseId} action="http://www.google.com/cse"{/if} id="search">
+	<form{if $config->googleCseId} action="https://www.google.com/cse"{/if} id="search">
 		<input type="hidden" name="cx" value="{$config->googleCseId}">
 		<input type="hidden" name="ie" value="UTF-8">
 		<input type="text" name="q" class="text" placeholder="Search"{if 'overview' === $active} autofocus{/if}>
