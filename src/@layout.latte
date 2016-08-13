@@ -32,6 +32,7 @@
 		{define group}
 			<ul>
 				{foreach $groups as $group}
+				{continueIf $group === 'PHP'}
 				{var $nextLevel = substr_count($iterator->nextValue, '\\') > substr_count($group, '\\')}
 				<li n:class="$actualGroup === $group || 0 === strpos($actualGroup, $group . '\\') ? active, $config->main && 0 === strpos($group, $config->main) ? main">
 					<a href="{if $groupBy === 'package'}{$group|packageUrl}{else}{$group|namespaceUrl}{/if}">
@@ -64,7 +65,7 @@
 
 		{define elements}
 			<ul>
-				<li n:foreach="$elements as $element" n:class="$activeElement === $element ? active"><a n:class="$element->deprecated ? deprecated, !$element->valid ? invalid" href="{$element|elementUrl}">{if $namespace}{$element->shortName}{else}{$element->name}{/if}</a></li>
+				<li n:foreach="$elements as $element" n:class="$activeElement === $element ? active" n:if="$element->namespaceName"><a n:class="$element->deprecated ? deprecated, !$element->valid ? invalid" href="{$element|elementUrl}">{if $namespace}{$element->shortName}{else}{$element->name}{/if}</a></li>
 			</ul>
 		{/define}
 
