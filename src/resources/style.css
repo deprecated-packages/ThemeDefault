@@ -371,6 +371,10 @@ dl.tree dd {
 	text-align: left;
 }
 
+.summary tr td {
+	cursor: pointer;
+}
+
 .summary tr:hover td {
 	background: #f6f6f4;
 }
