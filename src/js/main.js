@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function() {
 	var $document = $(document);
 	var $left = $('#left');
 	var $right = $('#right');
